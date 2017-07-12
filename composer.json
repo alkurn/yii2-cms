@@ -1,0 +1,28 @@
+{
+    "name": "alkurn/yii2-cms",
+    "description": "CMS packages for Yii2",
+    "keywords": ["yii2","extension","cms"],
+    "type": "yii2-extension",
+    "license": "BSD-4-Clause",
+    "support": {
+        "issues": "https://github.com/alkurn/yii2-paypal/issue",
+        "source": "https://github.com/alkurn/yii2-paypal"
+    },
+    "authors": [
+        {
+            "name": "Ganesh",
+            "email": "ganesh.alkurn@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6.0",
+        "yiisoft/yii2": "~2.0.6",
+        "alkurn/yii2-ckeditor": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "alkurn\\cms\\": ""
+        }
+    }
+}
