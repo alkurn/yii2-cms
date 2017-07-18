@@ -40,7 +40,10 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'latitude',
             // 'longitude',
             // 'restricted',
-            'status',
+            [
+                    'attribute' =>'status',
+                    'value' => function($model){ return ($model->status == 1) ? 'Active' : 'De-Active'; }
+            ],
             // 'meta_title:ntext',
             // 'meta_description:ntext',
             // 'meta_keywords:ntext',
