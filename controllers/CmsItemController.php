@@ -68,6 +68,7 @@ class CmsItemController extends Controller
 
         if ($model->load(Yii::$app->request->post()) &&  $model->validate() ) {
 
+            $model->type_id = CmsItem::TYPE_PAGE;
             if($model->save()){
                 return $this->redirect(['view', 'id' => $model->id]);
             }
