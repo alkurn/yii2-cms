@@ -66,8 +66,7 @@ class CmsItemController extends Controller
     {
         $model   = new CmsItem();
 
-        if ($model->load(Yii::$app->request->post()) &&  $model->validate() ) {
-
+        if ($model->load(Yii::$app->request->post())) {
             $model->type_id = CmsItem::TYPE_PAGE;
             if($model->save()){
                 return $this->redirect(['view', 'id' => $model->id]);
@@ -92,7 +91,7 @@ class CmsItemController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post())) {
-            $model->type_id = CmsItem::TYPE_BLOG;
+            $model->type_id = CmsItem::TYPE_PAGE;
             $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
