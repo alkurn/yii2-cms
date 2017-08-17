@@ -15,7 +15,8 @@ use alkurn\ckeditor\CKEditor;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'content')->widget(CKEditor::className(), [
-        'options' => ['rows' => 6], 'preset' => 'basic'
+        'options' => ['rows' => 6], 'preset' => 'basic', 'clientOptions' => ['extraAllowedContent' => 'div;span;ul;li;table;td;style;*[id];*(*);*{*}',]
+
     ])?>
     <?= $form->field($model, 'meta_title')->textarea(['rows' => 6]) ?>
     <?= $form->field($model, 'meta_description')->textarea(['rows' => 6]) ?>
