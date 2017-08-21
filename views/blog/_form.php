@@ -11,7 +11,7 @@ use kartik\file\FileInput;
 
 $initialImagePreview = [];
 if( $model->image ){
-    $initialImagePreview[] = Html::img('/uploads/'.$model->image, ['class' => 'file-preview-image']);
+    $initialImagePreview[] = Html::img('/uploads/'.$model->image, ['class' => 'file-preview-image', 'height'=>'138', 'width'=>'138']);
 }
 
 ?>
