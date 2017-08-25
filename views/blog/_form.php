@@ -11,7 +11,7 @@ use kartik\file\FileInput;
 
 $initialImagePreview = [];
 if( $model->image ){
-    $initialImagePreview[] = Html::img('/uploads/'.$model->image, ['class' => 'file-preview-image', 'height'=>'138', 'width'=>'138']);
+    $initialImagePreview[] = Html::img('/uploads/storage/'.$model->image, ['class' => 'file-preview-image', 'height'=>'138', 'width'=>'138']);
 }
 
 ?>
@@ -53,7 +53,6 @@ if( $model->image ){
     <?= $form->field($model, 'meta_title')->textarea(['rows' => 6]) ?>
     <?= $form->field($model, 'meta_description')->textarea(['rows' => 6]) ?>
     <?= $form->field($model, 'meta_keywords')->textarea(['rows' => 6]) ?>
-
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
