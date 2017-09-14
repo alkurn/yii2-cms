@@ -1,7 +1,7 @@
 <?php
 
 namespace alkurn\cms;
-use backend\modules\auth\Module as AuthModule;
+use common\components\AuthModule;
 /**
  * item module definition class
  */
@@ -54,6 +54,4 @@ class Module extends AuthModule
     {
         parent::init();
     }
-
-
 }
